@@ -1,16 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import Navber from "@/components/shared/Navber";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  weight: ["400", "600", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// age akta font ar veriable banaw then seta ke use koro
+//zdi akadhik use korte hoy tokhon uselly main layout a export kore jakhane lagbe sekhane use kore felte pari amra
+
+export const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
 });
 
 export const metadata = {
@@ -20,13 +25,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-    data-theme="light"
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        {children}</body>
+    <html data-theme="light" lang="en" className={` h-full antialiased`}>
+      <body className={`${poppins.className} min-h-full flex flex-col`}>
+        {children}
+      </body>
     </html>
   );
 }
