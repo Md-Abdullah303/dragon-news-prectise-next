@@ -1,5 +1,6 @@
 import LeftSidber from "@/components/pages/homapageComponents/news/LeftSidber";
 import RightSidebar from "@/components/pages/homapageComponents/news/RightSidebar";
+import NewsCard from "@/components/pages/homapageComponents/NewsCard";
 import { getCategoris, getNewsByCategoriId } from "@/lib/data";
 import React from "react";
 
@@ -16,13 +17,11 @@ const NewsCategoryPage = async ({ params }) => {
       </div>
 
       <div className="col-span-6 space-y-3.5">
-        <h1>Dragon News Home</h1>
-        <div className="space-y-4">
+        <h1 className="text-xl font-bold">Dragon News Home</h1>
+        <div className="space-y-6">
           {news.length > 0
             ? news.map((n) => (
-                <div key={n._id} className="p-4 border">
-                  {n.title}
-                </div>
+                <NewsCard key={n._id} news={n}></NewsCard>
               ))
             : "Not Found News"}
         </div>
