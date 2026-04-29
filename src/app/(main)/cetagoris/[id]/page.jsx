@@ -4,6 +4,10 @@ import NewsCard from "@/components/pages/homapageComponents/NewsCard";
 import { getCategoris, getNewsByCategoriId } from "@/lib/data";
 import React from "react";
 
+export const metadata = {
+  title: "Dragon News - Home",
+};
+
 const NewsCategoryPage = async ({ params }) => {
   const { id } = await params;
   // console.log(id);
@@ -11,7 +15,7 @@ const NewsCategoryPage = async ({ params }) => {
 
   const news = await getNewsByCategoriId(id);
   return (
-    <div className="container mt-10 mx-auto grid grid-cols-12 gap-5">
+    <div className="container mt-10 mx-auto grid grid-cols-12 gap-5 pb-20">
       <div className="col-span-3">
         <LeftSidber cetagoris={cetagoris} isActive={id} />
       </div>

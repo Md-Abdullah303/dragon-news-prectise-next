@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+
 const NewsLoadingPage = () => {
     return (
         <div className='h-[85vh] flex items-center justify-center'>
