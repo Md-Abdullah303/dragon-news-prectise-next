@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Dragon News
 
-## Getting Started
+## 📌 Project Name
 
-First, run the development server:
+Dragon News - BD best news web application
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologies Used
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+* NextJs
+* NextJs Routing
+* JavaScript (ES6+)
+* HTML5 (JSX)
+* tailwindcss
+* daisyUi
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📦 Libraries & Packages
 
-## Learn More
+* react-fast-marquee
+* react-hook-form
+* React Icons
+* React Toastify
+* React Spinners
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📖 Project Description
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is a web-based application inspired bd news application. That's why i think can a web site that give information in a beautiful UI and a better featured.
+I hope you will like my work...
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* 🔹 You can browse and explore different routs
+* 🔹 You can view news details
+* 🔹 Clean and simple user interface
+* 🔹 Interactive user experience
+* 🔹 Fast and smooth performance
+* 🔹 Not Responsive design (Mobile, Tablet)
+* 🔹 Desktop supported
+
+
+---
+
+## 📂 Project Structure
+
+/src
+/components
+/pages
+/assets
+
+---
+
+## 🚀 Live Link
+
+https://dragon-news-prectise-next.vercel.app/
+
+
+---
+
+## 🙋‍♂️ Note
+
+This project is created for learning and practice purposes 😄

@@ -5,6 +5,7 @@ import { Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import Navber from "@/components/shared/Navber";
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
     <html data-theme="light" lang="en" className={` h-full antialiased`}>
       <body className={`${poppins.className} min-h-full flex flex-col`}>
         {children}
+        <ToastContainer />
       </body>
     </html>
   );

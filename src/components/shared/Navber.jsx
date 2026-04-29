@@ -10,7 +10,7 @@ import { authClient } from '@/lib/auth-client';
 const Navber = () => {
     const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
-    console.log(isPending);
+    // console.log(isPending);
 
     return (
         <div className='flex items-center justify-between container mx-auto py-5'>
