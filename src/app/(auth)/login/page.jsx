@@ -1,15 +1,33 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { IoEye, IoEyeOff } from "react-icons/io5";
+
 
 const LoginPage = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+    const [isShowPassword, setIsShowPassword] = useState(false)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
 
-  const handleLoginFormSubmit = (data) => {
-    console.log(data);
-};
-// console.log(errors, 'error');
+  const handleLoginFormSubmit = async (data) => {
+    const { email, password } = data;
+
+    const { data: res, error } = await authClient.signIn.email({
+      email: email, // required
+      password: password, // required
+      rememberMe: true,
+      callbackURL: "/",
+    });
+    console.log(res, error);
+    if(error){
+        alert(error.message)
+    }
+  };
 
   return (
     <div className="container mx-auto h-[80vh] flex items-center justify-center">
@@ -21,23 +39,28 @@ const LoginPage = () => {
           <fieldset className="fieldset">
             <legend className="fieldset-legend">Email Address</legend>
             <input
-            {...register("email", { required: "email Recomendent"})}
+              {...register("email", { required: "email Recomendent" })}
               type="email"
               className="input outline-none border-none w-full"
               placeholder="Enter Your Email"
             />
-            {errors.email && <p className="text-red-500">{errors.email.message}</p>}
+            {errors.email && (
+              <p className="text-red-500">{errors.email.message}</p>
+            )}
           </fieldset>
           {/* password */}
-          <fieldset className="fieldset">
+          <fieldset className="fieldset relative">
             <legend className="fieldset-legend">Password</legend>
             <input
-            {...register("password", { required: "Password must be needed" })}
-              type="password"
+              {...register("password", { required: "Password must be needed" })}
+              type={isShowPassword ? "text" : "password"}
               className="input outline-none border-none w-full"
               placeholder="Enter Your Password"
             />
-            {errors.password && <p className="text-red-500">{errors.password.message}</p>}
+            <span onClick={()=> setIsShowPassword(!isShowPassword)}>{isShowPassword ? <IoEyeOff className="absolute text-lg top-4 right-2.5 cursor-pointer" /> : <IoEye className="absolute text-lg top-4 right-2.5 cursor-pointer" />}</span>
+            {errors.password && (
+              <p className="text-red-500">{errors.password.message}</p>
+            )}
           </fieldset>
           <button
             type="submit"
