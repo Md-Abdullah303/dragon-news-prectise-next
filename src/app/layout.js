@@ -1,7 +1,12 @@
+import dns from "node:dns"
+dns.setServers(['8.8.8.8', '8.8.4.4'])
+
 import { Geist, Geist_Mono, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import Navber from "@/components/shared/Navber";
+
+
 
 const poppins = Poppins({
   variable: "--font-poppins",
