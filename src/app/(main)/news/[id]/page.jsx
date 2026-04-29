@@ -26,7 +26,7 @@ const NewsDetailsPage = async ({ params }) => {
   return (
     <div className="max-w-7xl mx-auto grid grid-cols-12 gap-10 pb-20">
       {/* news card  */}
-      <div className="col-span-9 card bg-base-100 rounded-lg overflow-hidden shadow-sm">
+      <div className="col-span-9 card bg-base-100 rounded-lg overflow-hidden  shadow-sm ">
         {/* author info */}
         <div className="flex items-center justify-between gap-5 py-3 px-6 bg-slate-200">
           <div className="flex items-center gap-3">
@@ -55,7 +55,7 @@ const NewsDetailsPage = async ({ params }) => {
             </h1>
           </div>
         </div>
-        <div className="card-body space-y-2.5">
+        <div className="card-body flex flex-col  space-y-2.5">
           <h2 className="card-title text-xl">{news.title}</h2>
           <figure>
             <Image
@@ -67,7 +67,7 @@ const NewsDetailsPage = async ({ params }) => {
             />
           </figure>
 
-          <div className="">
+          <div className="flex-1">
             <p className="text-gray-600 text-md">{news.details}</p>
           </div>
 
