@@ -29,7 +29,7 @@ const NewsCategoryPage = async ({ params }) => {
           ) : (
             <div className="bg-slate-200 py-15 px-10 rounded-lg flex flex-col gap-3 items-center justify-center">
               <h1 className="text-xl md:text-3xl font-bold text-green-950">No data found</h1>
-              <p className="text-lg text-gray-400">Coming soon...</p>
+              <p className="text-xs md:text-lg text-gray-400">Coming soon...</p>
               <div className="">
                 <ClimbingBoxLoader color="purple" />
               </div>
