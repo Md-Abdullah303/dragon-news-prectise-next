@@ -8,7 +8,9 @@ const MyLink = ({href, children}) => {
     const isActive = parthName == href;
     return (
         <Link 
-        className={`${isActive ? 'border-b border-gray-500' : ''}`}
+        className={`${isActive ? 'border-b border-gray-500' : ''}
+         text-sm md:text-lg  
+        `}
         href={href}>
         {children}
         </Link>

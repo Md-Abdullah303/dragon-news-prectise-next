@@ -6,7 +6,7 @@ const LeftSidber = ({ cetagoris, isActive }) => {
   //   console.log(isActive);
   return (
     <div>
-      <h1 className="text-lg font-bold">All Caterogy</h1>
+      <h1 className="text-[16px] md:text-lg font-bold">All Caterogy</h1>
       <ul className="mt-5 flex flex-col gap-4">
         {cetagoris.news_category.map((news) => (
           <li
@@ -14,10 +14,10 @@ const LeftSidber = ({ cetagoris, isActive }) => {
                 ${
                   isActive === news.category_id && "bg-gray-600 text-white"
                 }
-                 rounded-md  text-md hover:bg-gray-300 hover:text-black text-center font-bold`}
+                 rounded-md  text-[10px] md:text-[15px] hover:bg-gray-300 hover:text-black md:text-center font-semibold`}
             key={news.category_id}
           >
-            <Link className={`block  p-3`} href={`/cetagoris/${news.category_id}`}>{news.category_name}</Link>
+            <Link className={`block p-2 md:p-3`} href={`/cetagoris/${news.category_id}`}>{news.category_name}</Link>
           </li>
         ))}
       </ul>

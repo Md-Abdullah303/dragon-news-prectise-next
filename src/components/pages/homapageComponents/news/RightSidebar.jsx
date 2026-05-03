@@ -30,7 +30,7 @@ const RightSidebar = () => {
   return (
     <div className="space-y-5">
       <div className="space-y-3">
-        <h1 className=" text-xl font-semibold">Login With</h1>
+        <h1 className=" text-[16px] md:text-lg font-bold">Login With</h1>
         <div className="flex flex-col gap-4">
           <button
             onClick={handleGoogleLogin}
